@@ -1,0 +1,30 @@
+		$weatherData = preg_split("/[\s,]+/", $homepage[3]);
+		$ending = count($weatherData) - 4;
+		for($J = 0; $J < $ending; $J+=5){
+			$S=$J+1;
+			$R=$J+2;
+			$T=$J+3;
+			$U=$J+4;
+			$Q = "INSERT INTO Data (Date, Hour, Temperature, Unknown, Something)
+			VALUES ('$weatherData[$J]', '$weatherData[$S]', '$weatherData[$R]', '$weatherData[$T]','$weatherData[$U]' )";
+			$DB->doQuery($Q);	
+		}
+					$Q = "INSERT INTO Data (Date, Hour, Temperature, Unknown, Something)
+			VALUES ('4/12', '$weatherData[$J]', '$weatherData[$S]', '$weatherData[$R]','?????')";
+			$DB->doQuery($Q);
+			
+				$I = 0;
+	foreach($homepage as $home){				
+		$weatherData = preg_split("/[\s,]+/", $home);
+		$ending = count($weatherData) - 3;
+		if($urls[$I] == '2014_12_data.csv">2'){
+			for($J = 0; $J < $ending; $J+=3){
+			$S=$J+1;
+			$R=$J+2;
+			$Q = "INSERT INTO Data (Date, Hour, Temperature, Unknown, Something)
+			VALUES ('4/12', '$weatherData[$J]', '$weatherData[$S]', '$weatherData[$R]','?????')";
+			$DB->doQuery($Q);	
+		}
+		} 
+		$I++;
+	}	
